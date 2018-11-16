@@ -17,23 +17,7 @@ namespace SfListViewSample
         #region Constructor
         public MainPage()
         {
-            InitializeComponent();
-            listView1.Loaded += ListView1_Loaded;
-            listView2.Loaded += ListView2_Loaded;
-        }
-
-        private void ListView1_Loaded(object sender, ListViewLoadedEventArgs e)
-        {
-            var container = listView1.GetVisualContainer();
-            var extent = (double)container.GetType().GetRuntimeProperties().FirstOrDefault(x => x.Name == "TotalExtent").GetValue(container);
-            listView1.HeightRequest = extent;
-        }
-
-        private void ListView2_Loaded(object sender, ListViewLoadedEventArgs e)
-        {
-            var container = listView2.GetVisualContainer();
-            var extent = (double)container.GetType().GetRuntimeProperties().FirstOrDefault(x => x.Name == "TotalExtent").GetValue(container);
-            listView2.HeightRequest = extent;
+            InitializeComponent();         
         }
         #endregion
     }
